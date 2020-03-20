@@ -1,0 +1,14 @@
+# IDE
+/.idea
+/*.iml
+
+# NodeJS
+/package-lock.json
+/node_modules
+/dist
+
+# Jest
+/coverage
+
+# Datasets
+/data

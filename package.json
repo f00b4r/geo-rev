@@ -1,0 +1,59 @@
+{
+    "name": "@webkitty/geo-rev",
+    "version": "1.0.0",
+    "author": {
+        "name": "stuchl4n3k",
+        "url": "https://stuchl4n3k.net",
+        "email": "stuchl4n3k@gmail.com"
+    },
+    "description": "Reverse geocoder for Node.js working with offline data and fast lookup times.",
+    "keywords": [
+        "geocoding",
+        "geocoder",
+        "reverse",
+        "gps",
+        "offline",
+        "local"
+    ],
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/webkitty/geo-rev"
+    },
+    "bugs": {
+        "url": "https://github.com/webkitty/geo-rev/issues"
+    },
+    "main": "dist/index.js",
+    "types": "src/types.d.ts",
+    "scripts": {
+        "build": "tsc",
+        "watch": "tsc --watch",
+        "test": "jest",
+        "test:coverage": "npm run test -- --coverage"
+    },
+    "jest": {
+        "verbose": true,
+        "testEnvironment": "node",
+        "testMatch": [
+            "**/spec/**/*.[jt]s?(x)"
+        ],
+        "transform": {
+            "^.+\\.tsx?$": "ts-jest"
+        },
+        "rootDir": "."
+    },
+    "dependencies": {
+        "static-kdtree": "^1.0.2"
+    },
+    "devDependencies": {
+        "@types/jest": "^24.0.18",
+        "@types/node": "^12.7.5",
+        "@typescript-eslint/eslint-plugin": "^2.24.0",
+        "@typescript-eslint/parser": "^2.24.0",
+        "codecov": "^3.6.1",
+        "eslint": "^6.8.0",
+        "jest": "^24.9.0",
+        "ts-jest": "^24.1.0",
+        "typescript": "^3.5.3"
+    }
+}
