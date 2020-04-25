@@ -5,6 +5,12 @@
 </p>
 
 <p align=center>
+<a href="https://circleci.com/gh/webkitty/geo-rev"><img src="https://img.shields.io/circleci/build/github/webkitty/geo-rev?style=flat-square"></a>
+<a href="https://codecov.io/gh/webkitty/geo-rev"><img src="https://img.shields.io/codecov/c/github/webkitty/geo0rev?style=flat-square"></a>
+<a href="https://github.com/webkitty/geo-rev/blob/master/LICENSE"><img src="https://img.shields.io/github/license/webkitty/geo-rev?style=flat-square"></a>
+</p>
+
+<p align=center>
 <strong>Simple reverse geocoder for Node.js that works with offline data and offers fast lookup times.</strong>
 <br>
 📍 → 🌐🔍 → 🏘️
