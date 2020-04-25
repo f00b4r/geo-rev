@@ -1,0 +1,34 @@
+version: 2.1
+
+jobs:
+  build:
+    working_directory: ~/webkitty-geo-rev
+    docker:
+      - image: circleci/node:10
+    steps:
+      - checkout
+      - run:
+          name: Update NPM
+          command: 'sudo npm install -g npm@latest'
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+          paths:
+            - ./node_modules
+      - run:
+          name: Install Dependencies
+          command: npm install
+      - save_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+          paths:
+            - ./node_modules
+      - run:
+          name: Build
+          command: npm run build
+      - run:
+          name: Test with Code Coverage
+          command: npm run test:coverage --ci
+      - run:
+          name: Send Code Coverage Report
+          command: './node_modules/.bin/codecov'
+      - store_artifacts:
+          path: coverage
