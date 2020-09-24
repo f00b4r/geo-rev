@@ -11,23 +11,20 @@ import { join } from 'path';
 import { createInterface } from 'readline';
 import { once } from 'events';
 import createKDTree = require('static-kdtree');
-
-export {
-    createRevGeocoder,
-};
+import { GeoRecord, LookupResult, Options, Point } from './types';
 
 /**
  * Creates a new RevGeocoder instance and runs its initialization using given options.
  * @param options Options to configure the RevGeocoder with
  */
-async function createRevGeocoder(options?: Options): Promise<RevGeocoder> {
+export async function createRevGeocoder(options?: Options): Promise<RevGeocoder> {
     return new RevGeocoder(options).init();
 }
 
 /**
  * Main class for reverse geocoding.
  */
-class RevGeocoder {
+export class RevGeocoder {
 
     private readonly dataset: string;
     private records: GeoRecord[] = [];
