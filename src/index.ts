@@ -12,6 +12,7 @@ import { createInterface } from 'readline';
 import { once } from 'events';
 import createKDTree = require('static-kdtree');
 import { GeoRecord, LookupResult, Options, Point } from './types';
+export * from './types';
 
 /**
  * Creates a new RevGeocoder instance and runs its initialization using given options.
