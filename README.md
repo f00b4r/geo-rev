@@ -31,7 +31,7 @@ initialization of the component.
 **Show me the code!**
 
 ```typescript
-import { createRevGeocoder } from 'geo-rev';
+import { createRevGeocoder } from '@webkitty/geo-rev';
 
 const revGeocoder = await createRevGeocoder();
 const result = revGeocoder.lookup({latitude: 50.652576, longitude: 13.723918});

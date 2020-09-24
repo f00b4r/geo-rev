@@ -1,6 +1,6 @@
 {
     "name": "@webkitty/geo-rev",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "author": {
         "name": "stuchl4n3k",
         "url": "https://stuchl4n3k.net",
@@ -24,7 +24,11 @@
         "url": "https://github.com/webkitty/geo-rev/issues"
     },
     "main": "dist/index.js",
-    "types": "src/types.d.ts",
+    "types": "dist/index.d.ts",
+    "files": [
+        "data",
+        "dist"
+    ],
     "scripts": {
         "build": "tsc",
         "watch": "tsc --watch",
